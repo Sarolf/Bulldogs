@@ -21,13 +21,13 @@ share:
   pinterest: false
   email: true
 
-social:
-  github: sarolf
+  #social:
+  #  github: sarolf
   #  stackoverflow: ''
   #  linkedin:
   #  instagram: ''
   #  lastfm: ''
-  rss: feed.xml
+  #  rss: feed.xml
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key:
