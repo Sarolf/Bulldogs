@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-name: Bulldogs! - SciFi that kicks ass
-description: Pen & Paper RPG
+name: Bulldogs
+description: SciFi that kicks ass; Pen & Paper RPG
 
 # Url is currently only used only for the RSS feed in feed.xml
 url: http://sarolf.github.io
