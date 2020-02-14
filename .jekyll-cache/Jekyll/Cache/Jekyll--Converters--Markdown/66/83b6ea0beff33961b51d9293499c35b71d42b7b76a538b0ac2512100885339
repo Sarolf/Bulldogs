@@ -1,0 +1,30 @@
+I"Ú<h2 id="installation">Installation</h2>
+
+<p>If you dontâ€™t have your own blog you can clone this repository and put your articles in a <code class="highlighter-rouge">_posts</code> folder.<br />
+If you already have your own blog then I think you can clone this repository and copy-paste content keeping your <code class="highlighter-rouge">_posts</code> folder.</p>
+
+<p>After you will have to set up your <code class="highlighter-rouge">_config.yml</code></p>
+
+<h2 id="license">License</h2>
+
+<p>The content of this theme is distributed and licensed under a <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 License</a></p>
+
+<blockquote>
+  <p>This license lets others distribute, remix, tweak, and build upon your work,<br />
+even commercially, as long as they credit you for the original creation. This<br />
+is the most accommodating of licenses offered. Recommended for maximum<br />
+dissemination and use of licensed materials.</p>
+</blockquote>
+
+<p>In other words: you can do anything you want with this theme on any site, just please<br />
+provide a link to the original theme on github.</p>
+
+<p>This theme includes the following files which are the properties of their<br />
+respective owners:</p>
+
+<ul>
+  <li>js/bootstrap.min.js - <a href="http://getbootstrap.com">bootstrap</a></li>
+  <li>css/bootstrap.min.css - <a href="http://getbootstrap.com">bootstrap</a></li>
+  <li>js/jquery.min.js - <a href="https://jquery.com">jquery</a></li>
+</ul>
+:ET

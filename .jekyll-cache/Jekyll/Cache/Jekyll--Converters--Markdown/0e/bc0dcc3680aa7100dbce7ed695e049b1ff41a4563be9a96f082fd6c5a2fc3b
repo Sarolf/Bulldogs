@@ -1,0 +1,31 @@
+I"�<h2 id="introduction">Introduction</h2>
+
+<p>This theme supports two types of images:</p>
+
+<ul>
+  <li>inline images: <img src="/assets/images/batWid1.png" alt="Battery Widget" /></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">![Battery Widget]({{ '/assets/images/batWid1.png' | relative_url }})</code></pre></figure>
+
+<ul>
+  <li>centered images with caption (optional):</li>
+</ul>
+
+<p><img src="/assets/images/deer.jpg" alt="img" class="center-image" /><em>(°0°)</em></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">![img]({{ '/assets/images/deer.jpg' | relative_url }}){: .center-image }*(°0°)*</code></pre></figure>
+
+<p>You can apply your own styles to image by creating css class with style:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.custom-image-style</span>
+<span class="p">{</span>
+<span class="c">/* your style */</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>And then applying your style just after the image in curly brackets with colon:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">[!image](path to image){:.custom-image-style}
+ </code></pre></figure>
+
+:ET

@@ -1,0 +1,18 @@
+I"�<h1 id="analytics">Analytics</h1>
+
+<h4 id="google-analytics"><a href="http://www.google.com/analytics/">Google Analytics</a></h4>
+
+<p>To enable Google Analytics create an account <a href="https://analytics.google.com">here</a>. Then add your tracking id in <code class="highlighter-rouge">config.xml</code>, it should look something like <code class="highlighter-rouge">UA-********-1</code></p>
+
+<h4 id="yandex-metrica"><a href="http://metrica.yandex.com">Yandex Metrica</a></h4>
+
+<p>To enable Yandex Metrica you need to register, create a ‘counter’ and then copy-paste it’s code in <code class="highlighter-rouge">/_includes/yandex-metrica.html</code> file.</p>
+
+<h1 id="tags">Tags</h1>
+
+<p>To use this feature you simply will need to create a markdown file for each tag which you are using in you site in <strong>tag</strong> folder. To simplify this procedure there is an <a href="http://pavelmakhov.com/jekyll-clean-dark/admin.html">/admin</a> page, which outputs the bash command which you just need to run inside <strong>tag</strong> folder of your site. Also don’t forget to rerun it when you add a post with new tag.</p>
+
+<h1 id="comments">Comments</h1>
+
+<p>To enable <a href="http://disqus.com">Disqus</a> register on the site and then just put your name in <code class="highlighter-rouge">_config.xml</code>. Comments could be switched on and off on per post basis, just put <code class="highlighter-rouge">comments: true</code> to enable them.</p>
+:ET

@@ -1,0 +1,261 @@
+I"5 <p>Below are the examples of the default table styling.</p>
+
+<h2 id="simple-table">Simple table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content from cell 1</td>
+      <td>Content from cell 2</td>
+    </tr>
+    <tr>
+      <td>Content in the first column</td>
+      <td>Content in the second column</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote class="filename">
+  <p>Markdown</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">|First Header | Second Header|
+|------------ | -------------|
+|Content from cell 1 | Content from cell 2|
+|Content in the first column | Content in the second column|</code></pre></figure>
+
+<h2 id="custom-styles">Custom styles</h2>
+
+<p>It is also possible to change a bit table styles by applying CSS classes. By default there are two classes available:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">.wide</code> - makes table width 100%</li>
+</ul>
+
+<table class="wide">
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content from cell 1</td>
+      <td>Content from cell 2</td>
+    </tr>
+    <tr>
+      <td>Content in the first column</td>
+      <td>Content in the second column</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote class="filename">
+  <p>Markdown - note the last line</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">|First Header | Second Header|
+|------------ | -------------|
+|Content from cell 1 | Content from cell 2|
+|Content in the first column | Content in the second column|
+{:.wide}</code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">.inner-borders</code> - shows inner borders</li>
+</ul>
+
+<table class="inner-borders">
+  <thead>
+    <tr>
+      <th>First Header</th>
+      <th>Second Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content from cell 1</td>
+      <td>Content from cell 2</td>
+    </tr>
+    <tr>
+      <td>Content in the first column</td>
+      <td>Content in the second column</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote class="filename">
+  <p>Markdown - note the last line</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">|First Header | Second Header|
+|------------ | -------------|
+|Content from cell 1 | Content from cell 2|
+|Content in the first column | Content in the second column|
+{:.inner-borders}</code></pre></figure>
+
+<p>You can add more such classes by putting them inside <strong>theme.scss</strong>. Here is how the above mentioned classes are defined:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">table</span><span class="nc">.wide</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="nc">.inner-borders</span> <span class="p">{</span>
+  <span class="nl">border-collapse</span><span class="p">:</span> <span class="nb">collapse</span><span class="p">;</span>
+  <span class="nl">border-style</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+  <span class="nt">td</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="mh">#5e5e5e</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="few-more-examples-from-kramdown-documentation">Few more examples from kramdown <a href="https://kramdown.gettalong.org/syntax.html#tables">documentation</a>:</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tfoot>
+</table>
+
+<blockquote class="filename">
+  <p>Table header row, two table bodies and a table footer row</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">|-----------------+------------+-----------------+----------------|
+| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+| Second line     |foo         | **strong**      | baz            |
+| Third line      |quux        | baz             | bar            |
+|-----------------+------------+-----------------+----------------|
+| Second body     |            |                 |                |
+| 2 line          |            |                 |                |
+|=================+============+=================+================|
+| Footer row      |            |                 |                |
+|-----------------+------------+-----------------+----------------|</code></pre></figure>
+
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tfoot>
+</table>
+
+<blockquote class="filename">
+  <p>Same as above but shorter</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">|---
+| Default aligned | Left aligned | Center aligned | Right aligned
+|-|:-|:-:|-:
+| First body part | Second cell | Third cell | fourth cell
+| Second line |foo | **strong** | baz
+| Third line |quux | baz | bar
+|---
+| Second body
+| 2 line
+|===
+| Footer row</code></pre></figure>
+
+:ET

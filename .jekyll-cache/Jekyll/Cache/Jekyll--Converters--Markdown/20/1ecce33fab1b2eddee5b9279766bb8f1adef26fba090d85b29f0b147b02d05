@@ -1,0 +1,22 @@
+I"™<p>Here is a sample post for Jekyll-Clean-Dark theme.</p>
+
+<ul>
+  <li>get it from <a href="https://github.com/streetturtle/jekyll-clean-dark">github</a></li>
+  <li>see the <a href="http://pavelmakhov.com/jekyll-clean-dark">live demo</a></li>
+  <li>see it <a href="http://pavelmakhov.com">in action on my blog</a></li>
+</ul>
+
+<p>This theme was created on top of <a href="https://scotte.github.io">Jekyll Clean theme</a> by Scotte.</p>
+
+<p>This theme uses some parts of Twitter Bootstrap, which allows it looks nice on a mobile devices using a collapsable nav bar and hiding the sidebar.</p>
+
+<p>Here how it looks like on some portable devices:</p>
+
+<p><img src="/assets/images/iphone_portrait.PNG" alt="My helpful screenshot" class="center-image" /><em>iPhone 5 portrait</em></p>
+
+<p><img src="/assets/images/iphone_landscape.PNG" alt="My helpful screenshot" class="center-image" /><em>iPhone 5 landscape</em></p>
+
+<p><img src="/assets/images/ipad_portrait.PNG" alt="My helpful screenshot" class="center-image" /><em>iPad mini portrait</em></p>
+
+<p><img src="/assets/images/ipad_landscape.PNG" alt="My helpful screenshot" class="center-image" /><em>iPad mini landscape</em></p>
+:ET

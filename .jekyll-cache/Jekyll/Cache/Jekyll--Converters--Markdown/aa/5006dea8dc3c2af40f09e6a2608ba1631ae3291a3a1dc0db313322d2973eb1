@@ -1,0 +1,61 @@
+I"«<h1 id="text-formatting-example">Text formatting example</h1>
+
+<p>Some examples of text formatting for some common text elements.</p>
+
+<h1 id="headers">Headers</h1>
+
+<h1 id="header1">Header1</h1>
+
+<h2 id="header2">Header2</h2>
+
+<h3 id="header3">Header3</h3>
+
+<h4 id="header4">Header4</h4>
+
+<h1 id="emphasis">Emphasis</h1>
+
+<p>Italics: <code class="highlighter-rouge">*asterisks*</code> -&gt; <em>asterisks</em> or <code class="highlighter-rouge">_underscores_</code> -&gt; <em>underscores</em>.</p>
+
+<p>Bold: <code class="highlighter-rouge">**asterisks**</code> -&gt; <strong>asterisks</strong> or <code class="highlighter-rouge">__underscores__</code> -&gt; <strong>underscores</strong>.</p>
+
+<p>You also can combine them: <code class="highlighter-rouge">**asterisks and _underscores_**</code> -&gt; <strong>asterisks and <em>underscores</em></strong>.</p>
+
+<h1 id="blockquotes-and-notes">Blockquotes and notes</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span>Blockquotes</code></pre></figure>
+
+<blockquote>
+  <p>Blockquotes</p>
+</blockquote>
+
+<p>Using very cool <a href="http://kramdown.gettalong.org/quickref.html#block-attributes">feature</a> of kramdown which allows to assign any attribute to a block-level element Iâ€™ve added note and warning:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span>Note 
+<span class="o">{</span>: .note<span class="o">}</span></code></pre></figure>
+
+<blockquote class="note">
+  <p>Note</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span>Warning 
+<span class="o">{</span>: .note .warning<span class="o">}</span></code></pre></figure>
+
+<blockquote class="note warning">
+  <p>Warning</p>
+</blockquote>
+
+<h1 id="keyboard-buttons">Keyboard buttons</h1>
+
+<p>In case you need to show some keyboard shortcuts, like <code class="key highlighter-rouge">Ctrl</code>+<code class="key highlighter-rouge">A</code> use following construction:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="sb">`</span>Ctrl<span class="sb">`</span><span class="o">{</span>: .key<span class="o">}</span>+<span class="sb">`</span>A<span class="sb">`</span><span class="o">{</span>:.key<span class="o">}</span></code></pre></figure>
+
+<p>Example of keyboard shortcuts in a terminal:</p>
+
+<p><code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">A</code> = move cursor to beginning of line<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">E</code> = move cursor to end of line<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">C</code> = kills the current process.<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">Z</code> = sends the current process to the background.<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">D</code> = logs you out.<br />
+<code class="key highlighter-rouge">Ctrl</code> + <code class="key highlighter-rouge">R</code> = finds the last command matching the entered letters.</p>
+:ET

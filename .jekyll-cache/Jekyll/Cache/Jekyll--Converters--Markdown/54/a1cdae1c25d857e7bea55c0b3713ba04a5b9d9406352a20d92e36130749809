@@ -1,0 +1,20 @@
+I"Ç<ul class="toc">
+  <li><a href="#some-random-text">Some random text</a>
+    <ul>
+      <li><a href="#second-level-random-text">Second level random text</a></li>
+      <li><a href="#another-second-level-random-text">Another second level random text</a>
+        <ul>
+          <li><a href="#third-level-text">Third level text</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#some-more-random-text">Some more random text</a>
+    <ul>
+      <li><a href="#second-level-random-text-1">Second level random text</a></li>
+      <li><a href="#another-second-level-random-text-1">Another second level random text</a></li>
+      <li><a href="#and-one-more">And one more</a></li>
+    </ul>
+  </li>
+</ul>
+:ET

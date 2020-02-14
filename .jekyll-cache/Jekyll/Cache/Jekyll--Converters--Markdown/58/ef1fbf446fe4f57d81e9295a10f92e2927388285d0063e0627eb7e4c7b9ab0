@@ -1,0 +1,112 @@
+I"I<h1 id="accent-color">Accent color</h1>
+
+<p>Accent color is color for some important elements, such as links, buttons, icons. Currently accent color is <button class="btn" style="background-color:#3CA2A2; color:#444444">#3CA2A2</button>. This theme has some more predefined colors available in <strong>theme.scss</strong>:</p>
+
+<blockquote class="filename">
+  <p>theme.scss</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// Several accent colors, choose one or create your own!</span>
+<span class="nv">$accent-color</span><span class="p">:</span> <span class="mh">#3CA2A2</span><span class="p">;</span>     <span class="c1">// original =)</span>
+<span class="c1">// $accent-color: #C38FD6;   velvet</span>
+<span class="c1">// $accent-color: #8FD6B3;   greenish</span>
+<span class="c1">// $accent-color: #35B4DE;   bluish</span>
+<span class="c1">// $accent-color: #D2E354;   yellowish</span>
+<span class="c1">// $accent-color: #52B54B;   green</span></code></pre></figure>
+
+<p>You can use one of them (just click the button below to see accent color in action) or define your own!</p>
+
+<p><button class="btn" style="background-color:#C38FD6; color:#444444">#C38FD6</button>, <button class="btn" style="background-color:#8FD6B3; color:#444444">#8FD6B3</button>, <button class="btn" style="background-color:#35B4DE; color:#444444">#35B4DE</button>, <button class="btn" style="background-color:#D2E354; color:#444444">#D2E354</button>, <button class="btn" style="background-color:#52B54B; color:#444444">#52B54B</button>.</p>
+
+<script>
+  $('.btn').click(function(){
+    var color = $(this).text();
+    [].forEach.call($('a'), function(item) {
+      item.style.color = color
+    })
+  })
+</script>
+
+<style>
+  .label{
+    cursor: default;
+    border-radius: 5px;
+    padding: 5px 8px;
+  }
+</style>
+
+<h1 id="other-colors">Other colors</h1>
+
+<p>As Jekyll comes with support of SASS I put colors in variables. Here are the ones which could be easily changed:</p>
+
+<blockquote class="filename">
+  <p>theme.scss</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$font-color</span><span class="p">:</span> <span class="mh">#dddddd</span><span class="p">;</span>
+<span class="nv">$background-color</span><span class="p">:</span> <span class="mh">#292929</span><span class="p">;</span>
+<span class="nv">$post-panel-color</span><span class="p">:</span> <span class="mh">#444</span><span class="p">;</span>
+<span class="nv">$footer-background-color</span><span class="p">:</span> <span class="mh">#292c2f</span><span class="p">;</span>
+<span class="nv">$note-color</span><span class="p">:</span> <span class="mh">#87CEFA</span><span class="p">;</span>
+<span class="nv">$warning-color</span><span class="p">:</span> <span class="mh">#ffff00</span><span class="p">;</span></code></pre></figure>
+
+<h1 id="background">Background</h1>
+
+<p>It is also possible to change the background pattern and color. This theme comes with few patterns pre-installed – you can check them by clicking on the images below. Or check the <a href="https://www.transparenttextures.com/">transparenttextures.com</a> – it has tons of different patterns for background.</p>
+
+<style>
+.pattern-list{
+    list-style-type: none;
+    padding: 0;
+}
+.pattern{
+    height: 100px;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.1);
+
+}
+.pattern:hover {
+    box-shadow: 0 0 3px 2px rgba(0,0,0,.3);
+    transition: box-shadow .2s ease;
+    cursor: pointer;
+}
+.smthg{
+    max-width: none !important;
+}
+.col-sm-6 {
+    padding: 5px !important;
+}
+</style>
+
+<ul class="pattern-list">
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/3px-tile.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/asfalt-light.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/black-linen.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/food.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/gplay.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/green-dust-and-scratches.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/hexellence.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/random-grey-variations.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/shley-tree-1.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/subtle-grey.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/xv.png')"></div></li>
+<li class="col-sm-6"><div class="pattern" style="background-image:url('/assets/css/pics/background/triangles.png')"></div></li>
+</ul>
+
+<script>
+  $('.pattern').click(function(){
+    var source = this.style.backgroundImage;
+    document.getElementsByTagName('body')[0].style.backgroundImage = source;
+    console.log("url('" + source + "'))");
+  })
+</script>
+
+<p>To change the color go to the <strong>theme.scss</strong> and change the <code class="highlighter-rouge">background-pattern</code> variable to the name of the pattern image file. To use custom pattern, download it from <a href="https://www.transparenttextures.com/">transparenttextures.com</a> and place it under <strong>css/pics/background/</strong>.</p>
+
+<blockquote class="filename">
+  <p>theme.scss</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// use this or pick any from /css/pics/background folder or from transparenttextures.com</span>
+<span class="nv">$background-pattern</span><span class="p">:</span> <span class="s1">'random-grey-variations.png'</span><span class="p">;</span></code></pre></figure>
+
+:ET

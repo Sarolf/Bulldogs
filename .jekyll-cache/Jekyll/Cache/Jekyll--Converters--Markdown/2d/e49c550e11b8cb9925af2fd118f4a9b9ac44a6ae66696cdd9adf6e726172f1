@@ -1,0 +1,87 @@
+I"[<h2 id="introduction">Introduction</h2>
+
+<p>For code syntax coloration I’m using Darcula theme from Intellij IDEA, which I’ve found in this post <a href="http://smasue.github.io/pygments-darcula">Darcula theme for Pygments</a>.</p>
+
+<p>XML with line numbers (linenos flag), <code class="highlighter-rouge">{% highlight xml linenos %}</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;rss</span> <span class="na">version=</span><span class="s">"2.0"</span> <span class="na">xmlns:atom=</span><span class="s">"http://www.w3.org/2005/Atom"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;channel&gt;</span>
+    <span class="nt">&lt;title&gt;</span>{{ site.name }}<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;description&gt;</span>{{ site.description }}<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;link&gt;</span>{{site.baseurl | prepend:site.url}}<span class="nt">&lt;/link&gt;</span>
+    <span class="nt">&lt;atom:link</span> <span class="na">href=</span><span class="s">"{{site.baseurl | prepend:site.url}}/feed.xml"</span> <span class="na">rel=</span><span class="s">"self"</span> <span class="na">type=</span><span class="s">"application/rss+xml"</span> <span class="nt">/&gt;</span>
+    {% for post in site.posts limit:10 %}
+      <span class="nt">&lt;item&gt;</span>
+        <span class="nt">&lt;title&gt;</span>{{ post.title }}<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;description&gt;</span>{{ post.content | xml_escape }}<span class="nt">&lt;/description&gt;</span>
+        <span class="nt">&lt;pubDate&gt;</span>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}<span class="nt">&lt;/pubDate&gt;</span>
+        <span class="nt">&lt;link&gt;</span>{{post.url | prepend:site.baseurl | prepend:site.url}}<span class="nt">&lt;/link&gt;</span>
+        <span class="nt">&lt;guid</span> <span class="na">isPermaLink=</span><span class="s">"true"</span><span class="nt">&gt;</span>{{post.url | prepend:site.baseurl | prepend:site.url}}<span class="nt">&lt;/guid&gt;</span>
+      <span class="nt">&lt;/item&gt;</span>
+    {% endfor %}
+  <span class="nt">&lt;/channel&gt;</span>
+<span class="nt">&lt;/rss&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote class="filename">
+  <p>JSON</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="nl">"employees"</span><span class="p">:[</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"John"</span><span class="p">,</span><span class="w"> </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Doe"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"Anna"</span><span class="p">,</span><span class="w"> </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Smith"</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"firstName"</span><span class="p">:</span><span class="s2">"Peter"</span><span class="p">,</span><span class="w"> </span><span class="nl">"lastName"</span><span class="p">:</span><span class="s2">"Jones"</span><span class="p">}</span><span class="w">
+</span><span class="p">]}</span></code></pre></figure>
+
+<blockquote class="filename">
+  <p>SQL</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="n">cm_content_nodes</span>
+<span class="k">from</span> <span class="n">alf_node</span> <span class="n">nd</span><span class="p">,</span> <span class="n">alf_qname</span> <span class="n">qn</span><span class="p">,</span> <span class="n">alf_namespace</span> <span class="n">ns</span>
+<span class="k">where</span> <span class="n">qn</span><span class="p">.</span><span class="n">ns_id</span> <span class="o">=</span> <span class="n">ns</span><span class="p">.</span><span class="n">id</span>
+  <span class="k">and</span> <span class="n">nd</span><span class="p">.</span><span class="n">type_qname_id</span> <span class="o">=</span> <span class="n">qn</span><span class="p">.</span><span class="n">id</span>
+  <span class="k">and</span> <span class="n">ns</span><span class="p">.</span><span class="n">uri</span> <span class="o">=</span> <span class="s1">'http://www.alfresco.org/model/content/1.0'</span>
+  <span class="k">and</span> <span class="n">qn</span><span class="p">.</span><span class="n">local_name</span> <span class="o">=</span> <span class="s1">'content'</span><span class="p">;</span></code></pre></figure>
+
+<blockquote class="filename">
+  <p>Java</p>
+</blockquote>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nc">String</span> <span class="nf">getToken</span><span class="o">(</span><span class="nc">HttpClient</span> <span class="n">client</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">UnsupportedEncodingException</span><span class="o">{</span>
+  <span class="nc">Cookie</span><span class="o">[]</span> <span class="n">cookies</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">getState</span><span class="o">().</span><span class="na">getCookies</span><span class="o">();</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nc">Cookie</span> <span class="n">cookie</span> <span class="o">:</span> <span class="n">cookies</span><span class="o">){</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">cookie</span><span class="o">.</span><span class="na">getName</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"Alfresco-CSRFToken"</span><span class="o">)){</span>
+      <span class="k">return</span> <span class="nc">URLDecoder</span><span class="o">.</span><span class="na">decode</span><span class="o">(</span><span class="n">cookie</span><span class="o">.</span><span class="na">getValue</span><span class="o">(),</span> <span class="s">"UTF-8"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>To add name to the code snippet, as in the examples above, add following construction before the snippet:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">&gt;</span>Java
+<span class="o">{</span>:.filename<span class="o">}</span>
+<span class="o">{</span>% highlight java %<span class="o">}</span>
+...</code></pre></figure>
+
+:ET
